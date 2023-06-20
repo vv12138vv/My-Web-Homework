@@ -1,0 +1,431 @@
+
+.shell{
+    width: 100%;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shell_begin{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: 1s;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.shell_begin .welcome{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome h2{
+    font-size: 4vw;
+    font-family: 'Cascadia Code PL';
+    color: rgba(0, 0, 0, 1);
+    letter-spacing: 0.5vh;
+    user-select: none;
+}
+
+.shell_begin video{
+    width: 100%;
+}
+
+
+.shell_main{
+    width: 100%;
+    height: auto;
+    position: relative;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+
+.shell_main_nav{
+    width: 100%;
+    height: 8vh;
+    position: sticky;
+    z-index: 100;
+    top:0;
+    margin-bottom: 10vh;
+    background-color: rgba(33, 37, 42,1);
+    display: flex;
+    backdrop-filter: blur(5px);
+    border-bottom: solid rgba(0, 0, 0, 1);
+}
+
+.shell_main_nav .shell_main_nav_logo{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    user-select: none;
+    margin-left: 4vw;
+    align-items: center;
+}
+
+.shell_main_nav .shell_main_nav_logo img{
+    height: 80%;
+
+}
+
+
+.shell_main_nav .shell_main_nav_logo span {
+    font-size: 2.5vh;
+    font-weight: bold;
+    font-family: 'Cascadia Code PL';
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.2vw;
+    line-height: 150%;
+    margin-left: 1.5vw;
+}
+
+.shell_main_nav ul {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    left: 30%;
+}
+
+.shell_main_nav ul li {
+    width: 20%;
+    text-align: center;
+    letter-spacing: 100%;
+}
+
+.shell_main_nav ul li a{
+    color: rgba(255, 255, 255, 0.9);
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 2vh;
+    letter-spacing: 0.1vw;
+    font-weight: bold;
+}
+
+.shell_main_nav .select_underline{
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    height: 5px;
+    width: 20%;
+    border-radius: 3px;
+    z-index: -100;
+    transition: 0.5s;
+}
+
+.shell_main_nav ul li:nth-child(1):hover~.select_underline{
+    left: 4%;
+    background-color: rgb(43, 145, 254);
+}
+
+.shell_main_nav ul li:nth-child(2):hover~.select_underline{
+    left: 28%;
+    background-color: rgb(43, 145, 254);
+}
+
+.shell_main_nav ul li:nth-child(3):hover~.select_underline{
+    left: 52%;
+    background-color: rgb(43, 145, 254);
+}
+
+.shell_main_nav ul li:nth-child(4):hover~.select_underline{
+    left: 76%;
+    background-color: rgb(43, 145, 254);
+}
+
+
+
+.shell_main .shell_main_slidebar{
+    position: relative;
+    width: 90%;
+    height: 85vh;
+    border-radius: 5vh;
+    overflow: hidden;
+    margin-bottom: 5vh;
+    border:solid 0.5vw rgb(31, 29, 28);
+}
+
+
+.shell_main .shell_main_slidebar .shell_main_slidebar_content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    left: 0;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+.shell_main .shell_main_slidebar .shell_main_slidebar_content img{
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit:contain;
+}
+
+
+
+.shell_main_slidebar .right_btn,.left_btn{
+    background-color: rgba(66, 65, 65, 0.1);
+    width: 2.5vw;
+    height: 20vh;
+    border-radius: 3vw;
+    font-size: 2vw;
+    line-height: 20vh;
+    text-align: center;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    
+    user-select: none;
+    transition: 0.5s;
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin:auto 0;
+}
+
+.shell_main_slidebar .left_btn{
+    left: 1vw;
+}
+.shell_main_slidebar .right_btn{
+    right: 1vw;
+}
+
+
+
+
+.shell_main_slidebar .shell_slidebar_selector{
+    position: absolute;
+    bottom:3%;
+    width: max-content;
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    gap: 1vw;
+
+    user-select: none;
+}
+
+
+
+.shell_main .shell_slidebar_selector .indicator{
+    height: 1vw;
+    width: 1vw;
+    border-radius: 0.5vw;
+    background-color: rgba(66, 65, 65, 0.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.shell_main_slidebar:hover .left_btn{
+    background-color: rgba(66, 65, 65, 0.8);
+    transition: 0.5s;
+}
+.shell_main_slidebar:hover .right_btn{
+    background-color: rgba(66, 65, 65, 0.8);
+    transition: 0.5s;
+}
+.shell_main_slidebar:hover .indicator{
+    background-color: rgba(66, 65, 65, 0.8);
+    transition: 0.5s;
+}
+
+
+.shell_main .shell_main_head{
+    height: 80vmin;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    margin-top: 10vh;
+}
+
+.shell_main_head .right{
+    width: 40%;
+    height: 99.5%;
+
+    border-radius: 4vh;
+    flex-shrink: 0;
+    border:solid 0.1vw rgb(149, 140, 125);
+    overflow: hidden;
+}
+.shell_main_head .right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.shell_main_head .left{
+    width: 60%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(24, 28, 32, 1);
+    border-radius: 4vh;
+    border:solid 0.1vw rgb(149, 140, 125);
+}
+
+
+
+.shell_main_head .left .head{
+    position: relative;
+    width: 90%;
+}
+
+.shell_main_head .left .head h2{
+    font-family: '微软雅黑';
+    font-size: 1.8vw;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.shell_main_head .left .content{
+    position: relative;
+    width: 90%;
+
+}
+
+.shell_main_head .left .content p{
+    font-family: 'Cascadia Code PL';
+    font-size: 1.2vw;
+    color: rgba(255, 255, 255, 0.9);
+    text-indent: 2.4vw;
+}
+
+.shell_main_head .left .content h3{
+    font-family: 'Cascadia Code PL';
+    font-size: 1.4vw;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5vh;
+    position: relative;
+}
+
+.shell_main_head .left .content .content_part{
+    position: relative;
+    width: 100%;
+    margin-bottom: 2vh;
+}
+.shell_main_head .left .content .content_part a{
+    color:lightblue
+}
+
+
+.shell_main_head .left .foot{
+    position: relative;
+    width: 90%;
+    top: 3vh;
+}
+
+.shell_main_head .left .foot p{
+    font-family: 'Cascadia Code PL';
+    font-size: 1.2vw;
+    color: rgba(255, 255, 255, 0.9)
+}
+
+
+.shell_main_content{
+    width: 95%;
+    margin-top: 10vh;
+    background-color: rgba(24, 28, 32, 1);;
+    border-radius: 5%;
+    border:solid 0.1vw rgb(149, 140, 125);
+}
+
+.shell_main_content .content_title{
+    width: 100%;
+    height: 15%;
+    margin-bottom: 5%;
+    position: relative;
+    top: 3vh;
+}
+.shell_main_content .content_title h2{
+    text-align: center;
+    font-size: 4vmin;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.shell_main_content .content_list{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+
+
+
+
+.shell_foot{
+    width: 100%;
+    height: 4vh;
+    background-color: rgba(33, 37, 42,1);
+    display: flex;
+}
+
+.shell_foot .left{
+    width: 30%;
+    position: relative;
+    left: 5%;
+}
+
+.shell_foot .left ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+    user-select: none;
+}
+.shell_foot .left ul li{
+    align-items: center;
+    height: 70%;
+    cursor: pointer;
+}
+.shell_foot .left ul li img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.shell_foot .right{
+    width: 20%;
+    position: relative;
+    left:50%;
+    display: flex;
+    align-items: center;
+}
+
+.shell_foot .right p{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 2vh;
+    font-weight: bolder;
+    margin: 0 auto;
+}
+

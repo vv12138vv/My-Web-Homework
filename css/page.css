@@ -1,0 +1,106 @@
+.page{
+    width: 100%;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page .heading{
+    display: flex;
+    width: 90vw;
+    border:solid 0.1vw rgb(149, 140, 125);
+    margin-bottom: 3vh;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+.page .heading img{
+    width: 100%;
+}
+
+.main{
+    width: 90vw;
+    height: auto;
+    background-color: rgba(24, 28, 32, 1);
+    display: flex;
+    margin-bottom: 5vh;
+    border:solid 0.1vw rgb(149, 140, 125);
+    border-radius: 1vw;
+    flex-direction: column;
+}
+
+
+.main .title{
+    position:relative;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;   
+}
+
+.main .title h1{
+    font-size: 2vw;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: '微软雅黑';
+    font-weight: bolder;
+    margin-bottom: 2%;
+}
+
+.main .title p{
+    font-size: 1vw;
+    color: rgba(43, 145, 254, 0.8);
+    font-family: '微软雅黑';
+}
+
+
+.main .content{
+    position:relative;
+    width: 100%;
+    display: flex;
+}
+.main .content .left{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    position: relative;
+    left: 3%;
+    margin-right: 3%;
+}
+
+.main .content .right{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+    margin-left: 1%;
+}
+
+.main .content p{
+    font-size: 1vw;
+    color: rgb(170, 166, 165);
+    font-family: '微软雅黑';
+    text-indent: 2vw;
+    margin-bottom: 1.5vh;
+    position:relative;
+}
+
+
+
+.main .foot{
+    position:relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    left: 5%;
+}
+
+.main .foot p{
+    font-size: 1vw;
+    color: rgba(156, 153, 152,1);
+    font-family: '微软雅黑';
+}

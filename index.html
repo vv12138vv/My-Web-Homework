@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid</title>
+    <link rel="stylesheet" href="./css/config.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/content_card.css">
+    <link rel="shortcut icon" href="http://www.realmadrid.com/favicon.ico">
+</head>
+
+<body onload="welcomePlay()">
+    <div class="shell">
+        <!-- 欢迎页面 -->
+        <div class="shell_begin">
+            <div class="welcome">
+                <h2 id="welcome_text1"></h2>
+                <h2 id="welcome_text2"></h2>
+            </div>
+
+            <video src="./resource/index/Begin.mp4" loop autoplay muted style="align-content: center;"></video>
+        </div>
+
+        <div class="shell_main">
+            <!-- 导航栏 -->
+            <div class="shell_main_nav">
+                <div class="shell_main_nav_logo">
+                    <img src="./resource/index/Real_Madrid_CF.svg.png">
+                    <span>Real Madrid</span>
+                </div>
+
+                <ul>
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./index.html#slidebar">图库</a></li>
+                    <li><a href="./index.html#intro">球队介绍</a></li>
+                    <li><a href="./index.html#content">球员风采</a></li>
+                    <div class="select_underline"></div>
+                </ul>
+            </div>
+
+            <!-- 轮播图 -->
+            <div class="shell_main_slidebar" id="slidebar">
+                <div class="shell_main_slidebar_content">
+                    <img src="./resource/Madrid1.jpg">
+                    <img src="./resource/Madrid2.jpg">
+                    <img src="./resource/Madrid3.jpg">
+                    <img src="./resource/Madrid4.jpg">
+                    <img src="./resource/Madrid5.jpg">
+                </div>
+                <div class="left_btn" onclick="imgLeft()">&lt;</div>
+                <div class="right_btn" onclick="imgRight()">&gt;</div>
+                <div class="shell_slidebar_selector">
+                </div>
+            </div>
+    
+            <!-- 个人介绍 -->
+            <div class="shell_main_head" id="intro">
+                <div class="left">
+                    <div class="head">
+                        <h2>皇家马德里</h2>
+                    </div>
+                    <div class="content">
+                        <div class="content_part">
+                            <h3>球队简介:</h3>
+                            <p>皇家马德里足球俱乐部（Real Madrid CF），简称“皇马”，是一家位于西班牙首都马德里的足球俱乐部，球队成立于1902年3月6日，前称马德里足球队。1920年6月29日，时任西班牙国王阿方索十三世把"Real"（西语，皇家之意）一词加于俱乐部名前，徽章上加上了皇冠，以此来推动足球运动在西班牙首都马德里市的发展。从此，俱乐部正式更名为皇家马德里足球俱乐部</p>
+                        </div>
+                        <div class="content_part">
+                            <h3>球队荣誉:</h3>
+                            <p> 
+                                皇家马德里足球俱乐部拥有众多世界球星。2000年12月11日被国际足球联合会（FIFA）评为20世纪最伟大的球队。2009年9月10日被国际足球历史和统计联合会评为20世纪欧洲最佳俱乐部。
+                            </p>
+                            <p>
+                                皇家马德里夺得过14次欧冠冠军（夺冠次数欧洲足坛第一）、35次西班牙足球甲级联赛冠军（西甲第一）、20次西班牙国王杯冠军、12次西班牙超级杯冠军、5次欧洲超级杯冠军和7次俱乐部赛事世界冠军（其中国际足联俱乐部世界杯冠军5次，夺冠次数第一）。
+                            </p>
+                        </div>
+                        <div class="content_part">
+                            <h3>知名球星</h3>
+                            <p>
+                                <a href="https://baike.baidu.com/item/%E5%85%8B%E9%87%8C%E6%96%AF%E8%92%82%E4%BA%9A%E8%AF%BA%C2%B7%E7%BD%97%E7%BA%B3%E5%B0%94%E5%A4%9A/4510104">
+                                    克里斯蒂亚诺·罗纳尔多(C罗)
+                                </a>,
+                                <a href="https://baike.baidu.com/item/%E9%BD%90%E5%86%85%E4%B8%81%C2%B7%E9%BD%90%E8%BE%BE%E5%86%85?fromtitle=%E9%BD%90%E8%BE%BE%E5%86%85&fromid=169291&fromModule=lemma_search-box"> 
+                                    齐内丁·齐达内,
+                                </a>
+                                圣地亚哥·伯纳乌，
+                                <a href="https://baike.baidu.com/item/%E5%8D%A2%E5%8D%A1%C2%B7%E8%8E%AB%E5%BE%B7%E9%87%8C%E5%A5%87/3311744?fromModule=lemma_search-box&fromtitle=%E8%8E%AB%E5%BE%B7%E9%87%8C%E5%A5%87&fromid=4653662">
+                                    卢卡·莫德里奇，
+                                </a>
+                                卡里姆·本泽马，
+                                劳尔，
+                                <a href="https://baike.baidu.com/item/%E5%A1%9E%E5%B0%94%E5%90%89%E5%A5%A5%C2%B7%E6%8B%89%E8%8E%AB%E6%96%AF/4748578?fromModule=lemma_search-box&fromtitle=%E6%8B%89%E8%8E%AB%E6%96%AF&fromid=10766738">
+                                    塞尔吉奥·拉莫斯，
+                                </a>
+                                普斯卡什，
+                                <a href="https://baike.baidu.com/item/%E6%89%98%E5%B0%BC%C2%B7%E5%85%8B%E7%BD%97%E6%96%AF?fromtitle=%E6%89%98%E5%B0%BC%E5%85%8B%E7%BD%97%E6%96%AF&fromid=16594537&fromModule=lemma_search-box">
+                                    托尼·克罗斯
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="foot">
+                        <p>口号：Hala Madrid!!!(前进，加油，马德里!!!)</p>
+                    </div>
+
+                </div>
+
+                <div class="right">
+                    <img src="./resource/Real Madrid Logo.jpg">
+                </div>
+            </div>
+    
+            <!-- 博客内容 -->
+            <div class="shell_main_content" id="content">
+
+                <div class="content_title">
+                    <h2>球员风采</h2>
+                </div>
+
+                <div class="content_list">
+                    <div class="content_card" style="--color:#0d9545; ">
+                        <img src="./resource/CR2.webp">
+                        <a href="./page1.html">
+                        <div class="card_text">
+                                <h2>C·Ronaldo</h2>
+                                <p>罗哥，罗哥，你真了不得</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content_card" style="--color:#0d9545;">
+                        <img src="./resource/benzema.png">
+                        <a href="./page2.html">
+
+                            <div class="card_text">
+                                <h2>Benzema</h2>
+                                <p>本泽霸王龙</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content_card" style="--color:#0d9545;">
+                        <img src="./resource/modric.jpg">
+                        <a href="./page3.html">
+                            <div class="card_text">
+                                <h2>Modric</h2>
+                                <p>魔笛悠扬</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content_card" style="--color:#0d9545;">
+                        <img src="./resource/bale.jpg">
+                        <a href="./page4.html">
+                            <div class="card_text">
+                                <h2>Bale</h2>
+                                <p>大圣降临</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="content_list">
+                    <div class="content_card" style="--color:#0d9545;">
+                        <img src="./resource/vinicius.jpeg">
+                        <div class="card_text">
+                            <h2>Vinicius</h2>
+                            <p>🐻皇</p>
+                        </div>
+                    </div>
+                    <div class="content_card" style="--color:#0d9545;">
+                        <img src="./resource/rodrygo.jpg">
+                        <div class="card_text">
+                            <h2>Rodrygo</h2>
+                            <p>神奇小子</p>
+                        </div>
+                    </div>
+                    <div class="content_card" style="--color:#0d9545;">
+                        <img src="./resource/kroos.jpg">
+                        <div class="card_text">
+                            <h2>Kroos</h2>
+                            <p>克高档，托尼-></p>
+                        </div>
+                    </div>
+                    <div class="content_card" style="--color:#0d9545;">
+                        <img src="./resource/ramos.jpg">
+                        <div class="card_text">
+                            <h2>Ramos</h2>
+                            <p><-带水,水爷</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+    
+    
+            <!-- 底部 -->
+            <div class="shell_foot">
+                <div class="left">
+                        <ul>
+                            <li>
+                                <a href="https://github.com/vv12138vv">
+                                    <img src="./resource/github.png">
+                                </a>
+                            </li>
+                            <li>
+                                <img src="./resource/wechat.png">
+                            </li>
+                            <li>
+                                <img src="./resource/qq.png">
+                            </li>
+                            <li>
+                                <img src="./resource/stackoverflow.png ">
+                            </li>
+                        </ul>
+                </div>
+                <div class="right">
+                    <p>
+                        Designed by vv12138vv
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        
+
+
+
+    </div>
+
+
+</body>
+
+<script src="./js/index.js">
+
+</script>
+
+</html>

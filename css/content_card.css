@@ -1,0 +1,85 @@
+
+.content_list .content_card{
+    width: 20%;
+    aspect-ratio: 3/4;
+    border-radius: 10%;
+    box-shadow: rgba(255, 255, 255, 0.2) 0 5vmin 6vmin -8vminm
+    var(--color) 0 4.5vmin 5vmin -6vmin,
+    rgba(50, 50, 50, 0.5) 0 4vmin 8vmin -2vmin,
+    rgba(0, 0, 0, 0.8) 0 4vmin 5vmin -3vmin;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+
+.content_list .content_card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: all 0.8s;
+}
+
+.content_card:hover img{
+    transform: scale(1.1);
+}
+
+.content_card::before,.content_card::after{
+    content: '';
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+
+    transform: scaleX(0);
+    transition: all 0.5s;
+    transform-origin: left;
+}
+
+.content_card::after{
+    top: 50%;
+    transition-delay: 0.15s;
+}
+
+.content_card:hover::before,.content_card:hover::after{
+    transform: scaleX(1);
+}
+
+.content_card .card_text{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 2vmin;
+    letter-spacing: 0.2vmin;
+    inset: 2vmin;
+    z-index: 2;
+    position: absolute;
+    top: 70%;
+}
+
+.content_card .card_text h2,.content_card .card_text p{
+    color: var(--color);
+    opacity: 0;
+    transform: translateY(10vmin);
+
+    transition: all 0.8s,color 3s;
+}
+
+.content_card .card_text h2{
+    font-size: 4vmin;
+    font-weight: bold;
+    margin-bottom: 1vmin;
+}
+.content_card .card_text p{
+    transition-delay: 0.1s;
+}
+
+.content_card:hover .card_text h2,.content_card:hover .card_text p{
+    color: inherit;
+    opacity: 1;
+    transform: translateY(0);
+}
